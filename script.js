@@ -1,3 +1,2 @@
 
-// Placeholder for custom scripts (if needed)
-console.log('Rob's Xtreme Cave is live');
+console.log("Rob's Xtreme Cave script loaded");

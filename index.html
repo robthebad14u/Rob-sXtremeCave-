@@ -1,240 +1,29 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Rob's Xtreme Cave</title>
-  <script src="https://unpkg.com/konva@8/konva.min.js"></script>
-  <style>
-    body {
-      font-family: 'Arial Black', 'Arial Bold', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #111;
-      color: #fff;
-      text-align: center;
-      background-image: linear-gradient(to bottom, #222, #000);
-      line-height: 1.6;
-    }
-    header {
-      background: #000;
-      color: #fff;
-      padding: 30px 0;
-      border-bottom: 3px solid #ff3333;
-      text-shadow: 2px 2px 4px rgba(255, 51, 51, 0.5);
-    }
-    header h1 {
-      font-size: 2.8em;
-      margin: 0;
-      letter-spacing: 3px;
-    }
-    header p {
-      font-size: 1.2em;
-      margin: 10px 0 0;
-      opacity: 0.9;
-    }
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-    .feature-box {
-      background: rgba(30, 30, 30, 0.9);
-      margin: 25px auto;
-      padding: 25px;
-      border-radius: 8px;
-      box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
-      border: 1px solid #333;
-      text-align: left;
-    }
-    .form-group, label {
-      margin-bottom: 10px;
-      display: block;
-      color: #ff0000;
-      font-weight: bold;
-    }
-    input, select {
-      width: 100%;
-      padding: 12px;
-      background: #333;
-      border: 1px solid #444;
-      color: white;
-      border-radius: 4px;
-      font-size: 16px;
-      margin-bottom: 15px;
-    }
-    .btn {
-      padding: 14px 30px;
-      border: none;
-      background: linear-gradient(to right, #ff3333, #cc0000);
-      color: white;
-      font-size: 16px;
-      font-weight: bold;
-      cursor: pointer;
-      border-radius: 30px;
-      text-transform: uppercase;
-      margin: 10px 5px;
-    }
-    .btn:hover {
-      background: linear-gradient(to right, #cc0000, #ff3333);
-    }
-    #room-container {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-    #room-preview {
-      flex: 1;
-      height: 500px;
-      background: #222;
-      border-radius: 8px;
-      overflow: hidden;
-      border: 2px solid #ff3333;
-    }
-    #item-palette {
-      width: 200px;
-      background: #222;
-      padding: 15px;
-      border: 2px solid #cc0000;
-      border-radius: 10px;
-    }
-    .palette-item {
-      padding: 10px;
-      margin: 5px 0;
-      background: #333;
-      cursor: grab;
-      border-radius: 5px;
-    }
-    .palette-item:hover {
-      background: #ff3333;
-    }
-    footer {
-      background: #000;
-      padding: 20px;
-      margin-top: 40px;
-      border-top: 1px solid #333;
-    }
-    .social-links a {
-      color: #ff0000;
-      margin: 0 10px;
-      font-size: 1.5em;
-      text-decoration: none;
-    }
-    @media (max-width: 768px) {
-      #room-container {
-        flex-direction: column;
-        align-items: center;
-      }
-      #room-preview, #item-palette {
-        width: 100%;
-      }
-      header h1 {
-        font-size: 2em;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <div class="container">
-      <h1>Rob's Xtreme Cave</h1>
-      <p>Design. Build. Dominate. Your Ultimate Man Cave or Diva Den Awaits.</p>
-    </div>
+    <h1>Welcome to Rob's Xtreme Cave</h1>
+    <p>Design your ultimate man cave or diva den</p>
   </header>
-  <main class="container">
-    <section class="feature-box">
-      <h2>Tell Us About Your Dream Den</h2>
-      <label>What's the main purpose of your room?</label>
-      <select id="room-purpose">
-        <option value="gamer">Gamer</option>
-        <option value="sports">Sports Fan</option>
-        <option value="musician">Musician</option>
-        <option value="movie">Movie Buff</option>
-        <option value="custom">Creative / Other</option>
-      </select>
-      <label>Favorite music or band?</label>
-      <input type="text" id="favorite-music" placeholder="e.g. Metallica, EDM, Blues">
-      <label>Your sound system style:</label>
-      <select id="sound-style">
-        <option value="basic">Basic</option>
-        <option value="surround">Surround</option>
-        <option value="studio">Studio / Recording</option>
-      </select>
-      <label>Your budget level:</label>
-      <select id="budget-level">
-        <option value="budget">Budget</option>
-        <option value="mid">Mid-Range</option>
-        <option value="premium">Premium</option>
-      </select>
-      <button class="btn" onclick="generateAICave()">Let AI Generate My Layout</button>
+
+  <main>
+    <section>
+      <h2>Start Designing</h2>
+      <button onclick="alert('This will soon launch the AI Room Designer')">Launch AI Designer</button>
     </section>
   </main>
-  <script>
-    function generateAICave() {
-      const purpose = document.getElementById('room-purpose').value;
-      const music = document.getElementById('favorite-music').value;
-      const sound = document.getElementById('sound-style').value;
-      const budget = document.getElementById('budget-level').value;
 
-      if (!stage || !layer) {
-        alert("Generate your cave first!");
-        return;
-      }
+  <footer>
+    <p>© 2025 Rob's Xtreme Cave. All rights reserved.</p>
+  </footer>
 
-      layer.destroyChildren();
-
-      const room = new Konva.Rect({
-        x: 0, y: 0,
-        width: stage.width(),
-        height: stage.height(),
-        fill: '#333',
-        stroke: '#cc0000',
-        strokeWidth: 2
-      });
-      layer.add(room);
-
-      if (purpose === "musician") {
-        addFurniture("speaker", 100, 100);
-        addFurniture("speaker", 200, 100);
-        addFurniture("table", 150, 200);
-        const bandText = new Konva.Text({
-          x: 100,
-          y: 250,
-          text: `${music} Corner`,
-          fontSize: 24,
-          fontStyle: 'bold',
-          fill: '#ff3333',
-        });
-        layer.add(bandText);
-      } else if (purpose === "gamer") {
-        addFurniture("tv", 400, 150);
-        addFurniture("sofa", 350, 300);
-      } else if (purpose === "sports") {
-        addFurniture("tv", 400, 100);
-        addFurniture("sofa", 350, 250);
-        const text = new Konva.Text({
-          x: 100,
-          y: 350,
-          text: "Game Day Central",
-          fontSize: 20,
-          fill: '#ff3333'
-        });
-        layer.add(text);
-      } else if (purpose === "movie") {
-        addFurniture("tv", 350, 150);
-        addFurniture("sofa", 300, 300);
-        const text = new Konva.Text({
-          x: 150,
-          y: 250,
-          text: "Home Theater Mode",
-          fontSize: 20,
-          fill: '#ff3333'
-        });
-        layer.add(text);
-      }
-
-      layer.draw();
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
-</html>c:\Users\rober\Downloads\index.html
+</html>
