@@ -25,3 +25,15 @@ footer {
   background-color: #000;
   margin-top: 2rem;
 }
+.donate-buttons a {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  background: #ff3333;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.donate-buttons a:hover {
+  background: #cc0000;
+}
